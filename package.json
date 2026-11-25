@@ -1,0 +1,54 @@
+{
+  "name": "datocms-plugin-crypto-address-validator",
+  "version": "1.0.0",
+  "description": "DatoCMS field extension and validation plugin for verifying multi-chain cryptocurrency wallet address syntax, checksums, mandatory Memo/Destination Tag routing rules, and vanity address-poisoning defense across 46+ blockchain networks.",
+  "homepage": "https://allswap.io/tools/address-validator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangglnuo-art/datocms-plugin-crypto-address-validator.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "AllSwap Security Labs",
+    "email": "zhangglnuo@gmail.com",
+    "url": "https://allswap.io"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "datocmsPlugin": {
+    "title": "MultiChain Memo & Crypto Address Validator",
+    "description": "Offline multi-chain cryptocurrency wallet address syntax, checksum, mandatory Memo/Tag routing, and address-poisoning field validator for DatoCMS.",
+    "entryPoint": "dist/index.html",
+    "pluginType": "field_editor",
+    "fieldTypes": [
+      "string",
+      "json"
+    ],
+    "parameterDefinitions": {
+      "global": [],
+      "instance": [
+        {
+          "id": "defaultChain",
+          "label": "Default Blockchain Network",
+          "type": "string",
+          "default": "EVM"
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "datocms",
+    "datocms-plugin",
+    "blockchain",
+    "cryptocurrency",
+    "address-validator",
+    "address-poisoning",
+    "memo-validator",
+    "web3",
+    "security",
+    "allswap"
+  ],
+  "dependencies": {
+    "datocms-plugin-sdk": "^1.2.0"
+  }
+}
